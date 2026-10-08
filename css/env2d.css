@@ -1,0 +1,590 @@
+.environment-2d {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #25292d;
+}
+
+.office-2d {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  overflow: hidden;
+  background: #555;
+}
+
+/* WALL */
+
+.office-wall-2d {
+  position: absolute;
+  inset: 0 0 42% 0;
+  background:
+    linear-gradient(
+      90deg,
+      #d6d0c5,
+      #e7e2d8 50%,
+      #d2ccc2
+    );
+}
+
+/* WINDOW */
+
+.office-window-2d {
+  position: absolute;
+  width: 32%;
+  height: 48%;
+  left: 8%;
+  top: 14%;
+  border: 14px solid #34383c;
+  background: #81a9c1;
+  box-shadow:
+    inset 0 0 0 4px #1e2428,
+    0 10px 25px rgba(0,0,0,.25);
+  overflow: hidden;
+}
+
+.window-sky-2d {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      #7ea7bf 0%,
+      #c4dbe5 60%,
+      #a8c2cc 100%
+    );
+}
+
+.window-building-2d {
+  position: absolute;
+  bottom: 0;
+  background: #6a7075;
+}
+
+.building-1 {
+  width: 24%;
+  height: 45%;
+  left: 8%;
+}
+
+.building-2 {
+  width: 30%;
+  height: 65%;
+  left: 38%;
+}
+
+.building-3 {
+  width: 20%;
+  height: 35%;
+  right: 8%;
+}
+
+/* CLOCK */
+
+.wall-clock-2d {
+  position: absolute;
+  right: 10%;
+  top: 18%;
+}
+
+.clock-face {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #f7f7f7;
+  border: 5px solid #3b3e41;
+  position: relative;
+}
+
+.clock-hand {
+  position: absolute;
+  width: 3px;
+  height: 25px;
+  left: 50%;
+  bottom: 50%;
+  transform-origin: bottom;
+  background: #292c2f;
+}
+
+.clock-hand.hour {
+  transform: rotate(40deg);
+}
+
+.clock-hand.minute {
+  height: 30px;
+  transform: rotate(150deg);
+}
+
+/* FLOOR */
+
+.office-floor-2d {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 42%;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #4b4e51 0,
+      #4b4e51 80px,
+      #45484b 81px,
+      #45484b 82px
+    );
+}
+
+/* DESK */
+
+.office-desk-2d {
+  position: absolute;
+  width: 62%;
+  height: 26%;
+  left: 21%;
+  bottom: 29%;
+  background: #704b32;
+  border-radius: 5px;
+  box-shadow:
+    0 18px 30px rgba(0,0,0,.35);
+  z-index: 10;
+}
+
+.office-desk-2d::after {
+  content: "";
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  bottom: -140px;
+  height: 140px;
+  border-left: 14px solid #303337;
+  border-right: 14px solid #303337;
+}
+
+/* COMPUTER */
+
+.computer-2d {
+  position: absolute;
+  left: 50%;
+  top: -130px;
+  width: 45%;
+  height: 155px;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 20;
+}
+
+.monitor-frame-2d {
+  width: 100%;
+  height: 120px;
+  padding: 8px;
+  background: #171a1d;
+  border-radius: 5px;
+  box-shadow:
+    0 8px 20px rgba(0,0,0,.4);
+}
+
+.computer-screen-2d {
+  width: 100%;
+  height: 100%;
+  background: #17222c;
+  color: #fff;
+  overflow: hidden;
+}
+
+.screen-header-2d {
+  padding: 7px 10px;
+  background: #26343e;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.screen-content-2d {
+  display: flex;
+  gap: 25px;
+  padding: 25px;
+}
+
+.screen-icon-2d {
+  font-size: 25px;
+}
+
+.monitor-stand-2d {
+  width: 15px;
+  height: 28px;
+  margin: 0 auto;
+  background: #202428;
+}
+
+.monitor-base-2d {
+  width: 80px;
+  height: 8px;
+  margin: auto;
+  background: #202428;
+  border-radius: 50%;
+}
+
+/* KEYBOARD */
+
+.keyboard-2d {
+  position: absolute;
+  width: 35%;
+  height: 18px;
+  left: 32%;
+  bottom: 12%;
+  background: #292d31;
+  border-radius: 3px;
+}
+
+.keyboard-keys-2d {
+  width: 90%;
+  height: 3px;
+  margin: 5px auto;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #777 0,
+      #777 7px,
+      transparent 8px,
+      transparent 11px
+    );
+}
+
+/* MOUSE */
+
+.mouse-2d {
+  position: absolute;
+  right: 14%;
+  bottom: 11%;
+  width: 30px;
+  height: 40px;
+  border-radius: 45%;
+  background: #202428;
+}
+
+/* PAPER */
+
+.paper-2d {
+  position: absolute;
+  left: 8%;
+  bottom: 10%;
+  width: 90px;
+  height: 110px;
+  padding: 10px;
+  background: #f4f0e4;
+  color: #333;
+  transform: rotate(-5deg);
+  box-shadow: 0 4px 10px rgba(0,0,0,.2);
+  font-size: 10px;
+}
+
+.paper-2d span {
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* COFFEE */
+
+.coffee-cup-2d {
+  position: absolute;
+  right: 7%;
+  bottom: 12%;
+  width: 35px;
+  height: 45px;
+  border-radius: 4px 4px 12px 12px;
+  background: #eee;
+}
+
+.coffee-2d {
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4b2e1f;
+}
+
+/* BACKUP DRIVE */
+
+.backup-drive-2d {
+  position: absolute;
+  right: 5%;
+  top: 25%;
+  width: 100px;
+  height: 45px;
+  border: 0;
+  border-radius: 5px;
+  background: #202428;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,.4);
+}
+
+.backup-drive-2d[hidden] {
+  display: none;
+}
+
+.drive-light-2d {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 7px;
+  border-radius: 50%;
+  background: #40d47a;
+}
+
+/* CHAIR */
+
+.office-chair-2d {
+  position: absolute;
+  left: 44%;
+  bottom: 7%;
+  width: 140px;
+  height: 190px;
+  z-index: 5;
+}
+
+.chair-back-2d {
+  width: 120px;
+  height: 100px;
+  margin: auto;
+  border-radius: 15px;
+  background: #25292d;
+}
+
+.chair-seat-2d {
+  width: 135px;
+  height: 35px;
+  margin: 0 auto;
+  border-radius: 12px;
+  background: #25292d;
+}
+
+.chair-post-2d {
+  width: 10px;
+  height: 55px;
+  margin: auto;
+  background: #303439;
+}
+
+.chair-base-2d {
+  width: 120px;
+  height: 10px;
+  margin: auto;
+  background: #303439;
+}
+
+/* PLANT */
+
+.office-plant-2d {
+  position: absolute;
+  left: 8%;
+  bottom: 13%;
+  width: 100px;
+  height: 190px;
+}
+
+.plant-pot-2d {
+  position: absolute;
+  bottom: 0;
+  left: 25px;
+  width: 50px;
+  height: 60px;
+  background: #744c38;
+  clip-path: polygon(
+    10% 0,
+    90% 0,
+    75% 100%,
+    25% 100%
+  );
+}
+
+.plant-leaf {
+  position: absolute;
+  width: 35px;
+  height: 90px;
+  border-radius: 50%;
+  background: #3e7548;
+  transform-origin: bottom;
+}
+
+.leaf-1 {
+  left: 30px;
+  bottom: 50px;
+  transform: rotate(-35deg);
+}
+
+.leaf-2 {
+  left: 50px;
+  bottom: 55px;
+  transform: rotate(30deg);
+}
+
+.leaf-3 {
+  left: 10px;
+  bottom: 55px;
+  transform: rotate(-60deg);
+}
+
+.leaf-4 {
+  left: 55px;
+  bottom: 70px;
+  transform: rotate(50deg);
+}
+
+.leaf-5 {
+  left: 35px;
+  bottom: 75px;
+}
+
+/* LABEL */
+
+.environment-label-2d {
+  position: absolute;
+  right: 25px;
+  bottom: 20px;
+  padding: 10px 14px;
+  background: rgba(20,23,26,.85);
+  color: white;
+  border-radius: 5px;
+  z-index: 30;
+}
+
+.environment-label-2d strong,
+.environment-label-2d span {
+  display: block;
+}
+
+.environment-label-2d span {
+  margin-top: 3px;
+  opacity: .7;
+  font-size: 12px;
+}
+
+/* CRASH */
+
+.computer-crashed {
+  background: #050505 !important;
+}
+
+.crash-screen-2d,
+.file-error-screen-2d,
+.no-backup-screen-2d {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.crash-icon-2d,
+.warning-icon-2d {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.crash-title-2d,
+.file-error-title-2d,
+.no-backup-title-2d {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.crash-message-2d,
+.file-error-detail-2d,
+.no-backup-message-2d {
+  margin-top: 8px;
+  font-size: 11px;
+  opacity: .8;
+}
+
+.crash-code-2d {
+  margin-top: 10px;
+  font-size: 9px;
+  opacity: .5;
+}
+
+/* INTERACTION HIGHLIGHT */
+
+.interactive-highlight {
+  animation: environment-pulse 1.2s infinite;
+  outline: 3px solid #4ea5ff;
+  outline-offset: 5px;
+}
+
+@keyframes environment-pulse {
+  0%, 100% {
+    filter: brightness(1);
+  }
+
+  50% {
+    filter: brightness(1.25);
+  }
+}
+
+/* BACKUP ACTIVITY */
+
+.backup-active {
+  animation: backup-pulse .8s infinite;
+}
+
+@keyframes backup-pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 0 rgba(64,212,122,0);
+  }
+
+  50% {
+    box-shadow:
+      0 0 25px rgba(64,212,122,.75);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .office-desk-2d {
+    width: 78%;
+    left: 11%;
+  }
+
+  .office-window-2d {
+    width: 35%;
+  }
+
+  .environment-label-2d {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .office-window-2d,
+  .wall-clock-2d,
+  .office-plant-2d {
+    display: none;
+  }
+
+  .office-desk-2d {
+    width: 90%;
+    left: 5%;
+  }
+
+  .computer-2d {
+    width: 55%;
+  }
+
+  .office-chair-2d {
+    left: 40%;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .interactive-highlight,
+  .backup-active {
+    animation: none;
+  }
+}

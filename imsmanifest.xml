@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SCORM 1.2 content manifest — Backup Best Practices: Protect and Recover Your Work
+     (Northstar Dynamics fictional security-awareness training) -->
+<manifest identifier="NORTHSTAR-BACKUP-BEST-PRACTICES-V1" version="1.2"
+          xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+          xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+
+  <organizations default="NORTHSTAR-ORG">
+    <organization identifier="NORTHSTAR-ORG">
+      <title>Backup Best Practices: Protect and Recover Your Work</title>
+      <item identifier="ITEM-SIMULATION" identifierref="RES-SCO" isvisible="true">
+        <title>Backup Best Practices: Protect and Recover Your Work</title>
+      </item>
+    </organization>
+  </organizations>
+
+  <resources>
+    <resource identifier="RES-SCO" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="imsmanifest.xml"/>
+      <file href="index.html"/>
+      <file href="css/accessibility.css"/>
+      <file href="css/desktop.css"/>
+      <file href="css/global.css"/>
+      <file href="css/env2d.css"/>
+      <file href="css/simulation.css"/>
+      <file href="css/ui.css"/>
+      <file href="js/accessibility.js"/>
+      <file href="js/audio.js"/>
+      <file href="js/course-state.js"/>
+      <file href="js/interactions.js"/>
+      <file href="js/main.js"/>
+      <file href="js/quiz.js"/>
+      <file href="js/scenario-engine.js"/>
+      <file href="js/scoring.js"/>
+      <file href="js/scorm.js"/>
+      <file href="lib/three.module.min.js"/>
+      <file href="scenes/env2d.js"/>
+      <file href="scenes/office.js"/>
+      <file href="scenarios/index.js"/>
+      <file href="scenarios/runtime.js"/>
+      <file href="scenarios/step00-introduction.js"/>
+      <file href="scenarios/step01-monday-morning.js"/>
+      <file href="scenarios/step02-quarterly-report.js"/>
+      <file href="scenarios/step03-computer-crash.js"/>
+      <file href="scenarios/step04-restart.js"/>
+      <file href="scenarios/step05-corrupted-file.js"/>
+      <file href="scenarios/step06-no-backup.js"/>
+      <file href="scenarios/step07-contact-it.js"/>
+      <file href="scenarios/step08-support-ticket.js"/>
+      <file href="scenarios/step09-it-call.js"/>
+      <file href="scenarios/step10-backup-lesson.js"/>
+      <file href="scenarios/step11-backup-setup.js"/>
+      <file href="scenarios/step12-321-rule.js"/>
+      <file href="scenarios/step13-backup-security.js"/>
+      <file href="scenarios/step14-automatic-backup.js"/>
+      <file href="scenarios/step15-restore-test.js"/>
+      <file href="scenarios/step16-debrief.js"/>
+      <file href="scenarios/step17-quiz.js"/>
+      <file href="ui/debrief.js"/>
+      <file href="ui/backup-rule.js"/>
+      <file href="ui/backup-security.js"/>
+      <file href="ui/backup.js"/>
+      <file href="ui/desktop.js"/>
+      <file href="ui/document-viewer.js"/>
+      <file href="ui/email.js"/>
+      <file href="ui/feedback.js"/>
+      <file href="ui/file-manager.js"/>
+      <file href="ui/login.js"/>
+      <file href="ui/phone.js"/>
+      <file href="ui/quiz.js"/>
+      <file href="ui/ransom-screen.js"/>
+      <file href="ui/restart.js"/>
+      <file href="ui/restore.js"/>
+      <file href="ui/spreadsheet.js"/>
+      <file href="ui/storage.js"/>
+      <file href="ui/support-portal.js"/>
+      <file href="ui/support-ticket.js"/>
+      <file href="ui/ticketing.js"/>
+      <file href="ui/window-manager.js"/>
+      <file href="ui/sysetm.js"/>
+      <file href="ui/pohne.js"/>
+    </resource>
+  </resources>
+</manifest>

@@ -1,0 +1,345 @@
+/* =========================================================
+   NOVA DESKTOP
+   ========================================================= */
+
+#desktop,
+.nova-desktop {
+    position: fixed;
+    inset: 0;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 70% 25%,
+            rgba(59, 130, 246, 0.16),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #111827 0%,
+            #172554 50%,
+            #0f172a 100%
+        );
+}
+
+/* ---------------------------------------------------------
+   TOP CORPORATE BAR
+   --------------------------------------------------------- */
+
+.desktop-topbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: var(--topbar-height);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 12px;
+
+    background: rgba(15, 23, 42, 0.94);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    z-index: 5000;
+}
+
+.desktop-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.desktop-brand-logo {
+    width: 20px;
+    height: 20px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 4px;
+
+    background: var(--color-primary);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.desktop-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--color-text-secondary);
+
+    font-size: 11px;
+}
+
+/* ---------------------------------------------------------
+   DESKTOP ICON AREA
+   --------------------------------------------------------- */
+
+.desktop-icons {
+    position: absolute;
+
+    top: 55px;
+    left: 20px;
+
+    display: grid;
+
+    grid-template-columns: repeat(1, 88px);
+
+    gap: 18px;
+
+    z-index: 10;
+}
+
+.desktop-icon {
+    width: 78px;
+    min-height: 76px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 7px;
+
+    border: 1px solid transparent;
+    border-radius: 7px;
+
+    color: white;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    transition:
+        background var(--transition-fast),
+        border-color var(--transition-fast);
+}
+
+.desktop-icon:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.desktop-icon:active {
+    background: rgba(37, 99, 235, 0.25);
+}
+
+.desktop-icon-image {
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 7px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    font-size: 23px;
+}
+
+.desktop-icon-label {
+    max-width: 78px;
+
+    text-align: center;
+
+    font-size: 11px;
+
+    line-height: 1.2;
+
+    text-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* ---------------------------------------------------------
+   TASKBAR
+   --------------------------------------------------------- */
+
+.desktop-taskbar {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: var(--taskbar-height);
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 8px;
+
+    background:
+        rgba(15, 23, 42, 0.96);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(12px);
+
+    z-index: 5000;
+}
+
+.taskbar-start {
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+    place-items: center;
+
+    border: 0;
+    border-radius: 7px;
+
+    background: transparent;
+    color: white;
+
+    font-size: 19px;
+}
+
+.taskbar-start:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.taskbar-apps {
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+
+    margin-left: 8px;
+}
+
+.taskbar-app {
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 0 11px;
+
+    border: 1px solid transparent;
+    border-radius: 6px;
+
+    background: transparent;
+    color: var(--color-text-secondary);
+
+    font-size: 12px;
+}
+
+.taskbar-app:hover {
+    background: rgba(255, 255, 255, 0.07);
+    color: white;
+}
+
+.taskbar-app.active {
+    background: rgba(37, 99, 235, 0.2);
+    border-color: rgba(59, 130, 246, 0.25);
+    color: white;
+}
+
+.taskbar-spacer {
+    flex: 1;
+}
+
+.system-tray {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 8px;
+
+    color: var(--color-text-secondary);
+
+    font-size: 11px;
+}
+
+.system-tray-icon {
+    opacity: 0.85;
+}
+
+.system-clock {
+    min-width: 68px;
+
+    text-align: center;
+
+    line-height: 1.2;
+}
+
+/* ---------------------------------------------------------
+   NOTIFICATIONS
+   --------------------------------------------------------- */
+
+.desktop-notification {
+    position: absolute;
+
+    right: 18px;
+    bottom: 66px;
+
+    width: 330px;
+
+    padding: 14px;
+
+    background: rgba(15, 23, 42, 0.96);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 9px;
+
+    box-shadow: var(--shadow-lg);
+
+    z-index: 9000;
+
+    animation: notification-in 180ms ease-out;
+}
+
+@keyframes notification-in {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.notification-title {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.notification-message {
+    color: var(--color-text-secondary);
+    font-size: 12px;
+}
+
+/* ---------------------------------------------------------
+   DESKTOP STATUS
+   --------------------------------------------------------- */
+
+.desktop-watermark {
+    position: absolute;
+
+    right: 24px;
+    bottom: 70px;
+
+    color: rgba(255, 255, 255, 0.18);
+
+    font-size: 11px;
+}
